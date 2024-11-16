@@ -18,6 +18,7 @@
 body {
     background-color: rgba(14, 14, 14, 1);
     color: #fff;
+    overflow-x: hidden;
 }
 
 header{
