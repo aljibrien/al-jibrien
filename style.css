@@ -19,7 +19,6 @@
 body {
     background-color: rgba(14, 14, 14, 1);
     color: #fff;
-    overflow-x: hidden;
 }
 
 header{
@@ -27,7 +26,7 @@ header{
     align-items: center;
     justify-content: space-between;
     margin:0;
-    padding: 20px 14% 0.5% 14% ;
+    padding: 20px 10% 0.5% 10% ;
     flex-wrap: wrap;
     border-bottom: rgba(255, 255, 255, 0.416) 1px solid;
     z-index: 999;
