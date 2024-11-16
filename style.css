@@ -1,0 +1,286 @@
+:root{
+    --background: #070F2B;
+    --primary : #1B1A55;
+    --second: #535C91;
+    --third: #9290C3;
+}
+
+* {
+  font-family: 'Roboto';
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  list-style-type: none;
+}
+body {
+    background-color: rgba(14, 14, 14, 1);
+    color: #fff;
+}
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin:0;
+    padding: 20px 14% 0.5% 14% ;
+    flex-wrap: wrap;
+    border-bottom: rgba(255, 255, 255, 0.416) 1px solid;
+    z-index: 999;
+    background-color: rgba(14, 14, 14, 1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+header h1{
+    font-weight: 700;
+    font-style: italic;
+    color: rgba(128, 37, 37, 0.884);
+}
+
+header .navbar ul{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+header .navbar ul li a{
+    color: #fff;
+}
+header .navbar ul li a:hover{
+    color: var(--third);
+    transition:  0.3s ease-out;
+    border-bottom: 1px solid var(--third);
+}
+
+header > #menu {
+    display: none;
+}
+
+section {
+    margin: 0 14%;
+}
+main{
+    margin-top: 50px;
+}
+/* PERTAMA */
+#pertama {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-top: 110px;
+}
+#pertama article {
+    font-size: 30px;
+    animation: darikiri 1s ease forwards;
+}
+
+#pertama article h2{
+    color: rgb(9, 81, 109);
+    font-size: 1.1em;
+    padding-bottom: 0.5em;
+}
+
+#pertama article h1{
+    font-weight: 700;
+    font-size: 1.3em;
+    font-style: italic;
+    padding-bottom: 0.2em;
+}
+#pertama article h1 span{
+    color: rgba(128, 37, 37, 0.884);
+}
+
+#pertama article > p{
+    color: rgba(126, 141, 155, 0.865);
+    font-weight: 400;
+    font-size: 0.8em;
+    
+}
+#pertama article .logo > a svg{
+    width: 16px;
+    height: 16px;
+    stroke: #fff;
+}
+#pertama article .logo > a svg:hover{
+    stroke:#535C91;
+}
+
+#pertama article .logo p{
+    padding-bottom: 1em;
+}
+
+#pertama article > a{
+    color: #fff;
+    font-size: 0.5em;
+    background-color: var(--primary);
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+
+#pertama article > a:hover{
+    background-color: #3a416a;
+    transition: 0.3s ease-in-out;
+}
+
+
+#pertama aside img{
+    width: 350px;
+    animation: darikanan 1s ease forwards;
+}
+
+
+@keyframes darikanan {
+    from {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes darikiri {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+/* KEDUA */
+#kedua{
+    margin-top: 5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 5em;
+}
+
+#kedua > h1{
+    /* color: rgb(255, 153, 0); */
+    margin-bottom: 20px;
+    font-weight: 400;
+}
+
+#kedua .kartu-container{
+    display: flex;
+    justify-content:space-between;
+    /* align-items: center; */
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+#kedua .kartu-container .kartu{
+    display: flex;
+    gap: 15px;
+}
+#kedua .kartu-container .kartu img{
+    width: 150px;
+}
+
+#kedua .kartu-container .kartu .isi h1{
+    font-size: 1.2em;
+    color: var(--third);
+}
+#kedua .kartu-container .kartu .isi h2{
+    font-size: 0.7em;
+    font-weight: 400;
+    margin: 2px 0 8px 0;
+}
+#kedua .kartu-container .kartu .isi span{
+    background-color: rgb(255, 208, 0);
+    padding: 3px 7px;
+    border-radius: 5px;
+    font-size: 0.6em;
+    color: #070F2B;
+    font-weight: 700;
+}
+#kedua .kartu-container .kartu .isi svg{
+    width: 14px;
+    height: 14px;
+}
+
+#kedua .kartu-container .kartu .isi .klik{
+    margin-top: 20px;
+    display: flex;
+}
+#kedua .kartu-container .kartu .isi .klik a{
+    color: #fff;
+    font-size: 0.8em;
+    /* align-items: center; */
+}
+#kedua .kartu-container .kartu .isi a:hover{
+    /* background-color: #9290C3; */
+    color: rgba(35, 53, 115, 0.824);
+    transition: 0.3s linear;
+}
+
+
+/* media queri */
+@media only screen and (max-width: 1260px) {
+    #pertama {
+        flex-direction: column-reverse;
+    }
+
+    #pertama article h2{
+        padding-top: 1.5em;
+    }
+}
+
+@media only screen and (max-width: 560px) {
+    header .navbar{
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        background-color: rgba(4, 18, 45, 0.648);
+        width: 15rem;
+        height: 100vh;
+        transition: 0.3s;
+    }
+
+    header .navbar.active{
+        right: 0;
+    }
+    header .navbar ul{
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: column;
+        gap: 25px;
+    }
+    header .navbar ul li a:hover{
+        color: var(--third);
+        transition:  0.3s ease-out;
+        border-bottom: 1px solid var(--third);
+    }
+
+    header > #menu{
+        display: block;
+    }
+}
+
+@media only screen and (max-width: 470px) {
+    #pertama article{
+        font-size: 150%;
+    }
+
+    #pertama aside img {
+        width: 100%;
+    }
+
+    #kedua  .kartu-container .kartu img{
+        width: 50%;
+        height: fit-content;
+    }
+    #kedua  .kartu-container .kartu .isi{
+        font-size: 0.8rem;
+    }
+
+}
