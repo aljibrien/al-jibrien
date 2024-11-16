@@ -71,13 +71,13 @@ main{
 #pertama {
     display: flex;
     justify-content: space-around;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     align-items: center;
-    margin-top: 110px;
+    margin-top: 7.2em;
 }
 #pertama article {
     font-size: 30px;
-    animation: darikiri 1s ease forwards;
+    /* animation: darikiri 1s ease forwards; */
 }
 
 #pertama article h2{
@@ -130,12 +130,12 @@ main{
 
 
 #pertama aside img{
-    width: 350px;
-    animation: darikanan 1s ease forwards;
+    width: 330px;
+    /* animation: darikanan 1s ease forwards; */
 }
 
 
-@keyframes darikanan {
+/* @keyframes darikanan {
     from {
         opacity: 0;
         transform: translateX(100%);
@@ -153,7 +153,7 @@ main{
     to {
         transform: translateX(0);
     }
-}
+} */
 
 /* KEDUA */
 #kedua{
@@ -166,7 +166,6 @@ main{
 }
 
 #kedua > h1{
-    /* color: rgb(255, 153, 0); */
     margin-bottom: 20px;
     font-weight: 400;
 }
@@ -174,7 +173,6 @@ main{
 #kedua .kartu-container{
     display: flex;
     justify-content:space-between;
-    /* align-items: center; */
     flex-wrap: wrap;
     gap: 20px;
 }
@@ -210,7 +208,7 @@ main{
 }
 
 #kedua .kartu-container .kartu .isi .klik{
-    margin-top: 20px;
+    margin-top: 10px;
     display: flex;
 }
 #kedua .kartu-container .kartu .isi .klik a{
@@ -226,11 +224,10 @@ main{
 
 
 /* media queri */
-@media only screen and (max-width: 1260px) {
+@media only screen and (max-width: 880px) {
     #pertama {
         flex-direction: column-reverse;
     }
-
     #pertama article h2{
         padding-top: 1.5em;
     }
@@ -250,6 +247,7 @@ main{
     header .navbar.active{
         right: 0;
     }
+    
     header .navbar ul{
         margin-top: 25px;
         display: flex;
@@ -257,6 +255,7 @@ main{
         flex-direction: column;
         gap: 25px;
     }
+
     header .navbar ul li a:hover{
         color: var(--third);
         transition:  0.3s ease-out;
