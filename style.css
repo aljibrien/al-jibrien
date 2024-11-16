@@ -240,7 +240,7 @@ main{
         position: absolute;
         top: 100%;
         right: -100%;
-        background-color: rgba(4, 18, 45, 0.648);
+        background-color: rgba(4, 18, 45, 0.893);
         width: 15rem;
         height: 100vh;
         transition: 0.3s;
@@ -250,6 +250,7 @@ main{
         right: 0;
     }
     header .navbar ul{
+        margin-top: 25px;
         display: flex;
         justify-content: flex-start;
         flex-direction: column;
