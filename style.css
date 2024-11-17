@@ -26,7 +26,7 @@ header{
     align-items: center;
     justify-content: space-between;
     margin:0;
-    padding: 20px 10% 0.5% 10% ;
+    padding: 20px 14% 0.5% 14% ;
     flex-wrap: wrap;
     border-bottom: rgba(255, 255, 255, 0.416) 1px solid;
     z-index: 999;
@@ -35,6 +35,18 @@ header{
     top: 0;
     left: 0;
     right: 0;
+}
+header .logo-head {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+header .logo-head >img{
+    width: 35px;
+    height: 35px;
+    object-fit: cover;
+    border-radius: 50%;
 }
 header h1{
     font-weight: 700;
@@ -209,12 +221,10 @@ main{
 
 #kedua .kartu-container .kartu .isi .klik{
     margin-top: 10px;
-    display: flex;
 }
 #kedua .kartu-container .kartu .isi .klik a{
     color: #fff;
     font-size: 0.8em;
-    /* align-items: center; */
 }
 #kedua .kartu-container .kartu .isi a:hover{
     /* background-color: #9290C3; */
@@ -234,6 +244,9 @@ main{
 }
 
 @media only screen and (max-width: 560px) {
+    header{
+        padding: 20px 8% 0.5% 8% ;;
+    }
     header .navbar{
         position: absolute;
         top: 100%;
@@ -268,6 +281,7 @@ main{
 }
 
 @media only screen and (max-width: 470px) {
+
     #pertama article{
         font-size: 150%;
     }
