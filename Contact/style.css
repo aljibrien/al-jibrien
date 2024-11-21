@@ -1,0 +1,201 @@
+:root{
+    --background: #070F2B;
+    --primary : #1B1A55;
+    --second: #535C91;
+    --third: #9290C3;
+}
+
+* {
+  font-family: 'Roboto';
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  list-style-type: none;
+  max-width: 100vw;
+}
+body {
+    background-color: rgba(14, 14, 14, 1);
+    color: #fff;
+}
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin:0;
+    padding: 20px 14% 0.5% 14% ;
+    flex-wrap: wrap;
+    border-bottom: rgba(255, 255, 255, 0.416) 1px solid;
+    z-index: 999;
+    background-color: rgba(14, 14, 14, 1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    box-shadow: 0 -6px 48px 0px rgba(255, 255, 255, 0.416);
+}
+header .logo-head {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+header .logo-head >img{
+    width: 35px;
+    height: 35px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+header h1{
+    font-weight: 700;
+    font-style: italic;
+    color: rgba(128, 37, 37, 0.884);
+}
+
+header .navbar ul{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+header .navbar ul li a{
+    color: #fff;
+}
+header .navbar ul li a span{
+    font-weight: 700;
+    color: rgb(58, 150, 186);
+    border-bottom: 1px solid rgb(58, 150, 186);
+    pointer-events: none;
+}
+header .navbar ul li a:hover{
+    color: var(--third);
+    transition:  0.3s ease-out;
+    border-bottom: 1px solid var(--third);
+}
+
+header > #menu {
+    display: none;
+}
+section {
+    margin: 0 14%;
+    margin-bottom: 20px;
+}
+
+section main {
+    margin-top: 130px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+section main .container-contact{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1100px;
+    width: 100%;
+    gap: 20px;
+    padding: 5%;
+    background-color: #e4e6ee07;
+    border-radius: 30px;
+    flex-wrap: wrap;
+}
+section main h2{
+    margin-bottom: 1em;
+}
+
+section main .container-contact aside img{
+    width: 20em;
+    height: auto;
+    border-radius: 10px;
+}
+
+section main .container-contact .contact-form{
+    display: flex;
+    flex: 2;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    min-width: 40%;
+}
+
+section main .container-contact .contact-form .input-group{
+    display: flex;
+    align-items: center;
+    border: 1px solid #fff ;
+    margin-bottom: 20px;
+}
+section main .container-contact .contact-form .input-group input,textarea{
+    width: 100%;
+    color: #fff;
+    background: none;
+    resize: none;
+    padding: 0.8em;
+}
+section .contact-form button {
+    width: fit-content;
+    align-self: flex-end;
+    background-color: #0c2e51;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+section .contact-form button:hover {
+    background-color: #145a96;
+}
+
+@media only screen and (max-width: 560px) {
+    header{
+        padding: 20px 8% 0.5% 8% ;
+    }
+    header .navbar{
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        background-color: rgba(4, 18, 45, 0.893);
+        width: 15rem;
+        height: 100vh;
+        transition: 0.3s;
+    }
+
+    header .navbar.active{
+        right: 0;
+    }
+    
+    header .navbar ul{
+        margin-top: 25px;
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    header .navbar ul li a:hover{
+        color: var(--third);
+        transition:  0.3s ease-out;
+        border-bottom: 1px solid var(--third);
+    }
+
+    header > #menu{
+        display: block;
+    }
+
+    section main .container-contact aside img{
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+    }
+    section .contact-form button{
+        font-size: 70%;
+    }
+}
