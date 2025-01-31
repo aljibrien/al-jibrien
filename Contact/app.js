@@ -7,7 +7,7 @@ function sendToWhatsApp(event) {
 
     // Format pesan
     const whatsappNumber = '6289626880034'; // Ganti dengan nomor WhatsApp tujuan
-    const text = `Hello, Nama ku ${name}.%0AMessage: ${message}`;
+    const text = `Assalamualaikum, Nama ku ${name}.%0A ${message}`;
 
     // Redirect ke WhatsApp
     const whatsappURL = `https://wa.me/${whatsappNumber}?text=${text}`;
